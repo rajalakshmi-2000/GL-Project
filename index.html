@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Trello Board</title>
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="utils.css">
+    <link rel="stylesheet" href="trello-dashboard.css">
+    <link rel="stylesheet" href="trello-board.css">
+    <!--
+            Downloaded from https://fontawesome.com/how-to-use/on-the-web/setup/hosting-font-awesome-yourself
+        -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+    <style>
+        #sub3 {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar">
+        <ul class="menu">
+            <li class="pointer">
+                <i class="home fas fa-home"></i>
+            </li>
+            <li class="pointer">
+                <i class="boards fas fa-th-list"></i>
+                Boards
+            </li>
+            <li class="menu-input">
+                <input type="text" />
+            </li>
+        </ul>
+        <div class="app-title">
+            Tralala
+        </div>
+        <div class="actions">
+            <span class="pointer">
+                <i class="fas fa-plus" id="add-board"></i>
+            </span>
+            <span class="pointer">
+                <i class="fas fa-user" id="profile-image"></i>
+            </span>
+        </div>
+    </nav>
+    <div class="board-container">
+        <div class="board-menu">
+            <div class="board-title">Frontend Training</div>
+            <div class="board-show-menu pointer">
+                <i class="fas fa-ellipsis-v"></i>
+                Show menu
+            </div>
+        </div>
+        <div class="board">
+            <div class="task-list-wrapper">
+                <div class="task-list">
+                    <div class="task-list-title-container">
+                        <h3 class="task-list-title">To Do</h3>
+                        <span class="task-list-more pointer">...</span>
+                    </div>
+                    <div class="task pointer">
+                        Learn HTML
+                        <i class="task-edit fas fa-pencil-alt pointer"></i>
+                    </div>
+                    <div class="task pointer">
+                        Learn CSS
+                        <i class="task-edit fas fa-pencil-alt pointer"></i>
+                    </div>
+                    <div class="task pointer">
+                        Learn JavaScript
+                        <i class="task-edit fas fa-pencil-alt pointer"></i>
+                    </div>
+                    <div class="task pointer">
+                        Practice Bike
+                        <i class="task-edit fas fa-pencil-alt pointer"></i>
+                    </div>
+                    <div class="add-card-form">
+                        <form name="textform">
+                            <input id="addbutton" type=button name=type value='+ Add another card'
+                                onclick="showt('sub3','cardbutton','icon')">
+                            <textarea id="sub3" rows="3" placeholder="Enter a title for this card..."
+                                class="full-width-input" style="visibility:hidden;"></textarea>
+
+                            <div class="add-card-form-actions">
+                                <button id="cardbutton" class="btn btn-inline btn-primary add-card-button pointer"
+                                    type="button" onclick="newElement('sub3','0')" style="visibility:hidden;">Add
+                                    Card</button>
+
+                                <i id="icon" class="fas fa-2x fa-times add-card-cancel pointer"
+                                    style="visibility:hidden;" onclick="hideTextArea('sub3','cardbutton','icon')" ;></i>
+                            </div>
+
+                        </form>
+
+                    </div>
+                    <script type="text/javascript" src="main.js"></script>
+                </div>
+            </div>
+            <div class="task-list-wrapper">
+                <div class="task-list">
+                    <div class="task-list-title-container">
+                        <h3 class="task-list-title">Doing</h3>
+                        <span class="task-list-more pointer">...</span>
+                    </div>
+                    <div class="task pointer">Prepare resume</div>
+                    <div class="add-card-form">
+                        <form name="textform">
+                            <input id="addbutton" type=button name=type value='+ Add another card'
+                                onclick="showt('sub31','cardbutton1','icon1')">
+                            <textarea id="sub31" rows="3" placeholder="Enter a title for this card..."
+                                class="full-width-input" style="visibility:hidden;"></textarea>
+
+                            <div class="add-card-form-actions">
+                                <button id="cardbutton1" class="btn btn-inline btn-primary add-card-button pointer"
+                                    type="button" onclick="newElement('sub31','1')" style="visibility:hidden;">Add
+                                    Card</button>
+
+                                <i id="icon1" class="fas fa-2x fa-times add-card-cancel pointer"
+                                    style="visibility:hidden;" onclick="hideTextArea('sub31','cardbutton1','icon1')"
+                                    ;></i>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            
+            <!--Testing/Verifying-->
+            <div class="task-list-wrapper">
+                <div class="task-list">
+                    <div class="task-list-title-container">
+                        <h3 class="task-list-title">Testing/Verifying</h3>
+                        <span class="task-list-more pointer">...</span>
+                    </div>
+                    <div class="task pointer">Prepare resume</div>
+                    <div class="add-card-form">
+                        <form name="textform">
+                            <input id="addbutton" type=button name=type value='+ Add another card'
+                                onclick="showt('sub32','cardbutton2','icon2')">
+                            <textarea id="sub32" rows="3" placeholder="Enter a title for this card..."
+                                class="full-width-input" style="visibility:hidden;"></textarea>
+
+                            <div class="add-card-form-actions">
+                                <button id="cardbutton2" class="btn btn-inline btn-primary add-card-button pointer"
+                                    type="button" onclick="newElement('sub32','2')" style="visibility:hidden;">Add
+                                    Card</button>
+                                    <i id="icon2" class="fas fa-2x fa-times add-card-cancel pointer"
+                                    style="visibility:hidden;" onclick="hideTextArea('sub32','cardbutton2','icon2')"
+                                    ;></i>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
+            <!--deploying-->
+            <div class="task-list-wrapper">
+                <div class="task-list">
+                    <div class="task-list-title-container">
+                        <h3 class="task-list-title">Deploying</h3>
+                        <span class="task-list-more pointer">...</span>
+                    </div>
+                    <div class="task pointer">Prepare resume</div>
+                    <div class="add-card-form">
+                        <form name="textform">
+                            <input id="addbutton" type=button name=type value='+ Add another card'
+                                onclick="showt('sub33','cardbutton3','icon3')">
+                            <textarea id="sub33" rows="3" placeholder="Enter a title for this card..."
+                                class="full-width-input" style="visibility:hidden;"></textarea>
+
+                            <div class="add-card-form-actions">
+                                <button id="cardbutton3" class="btn btn-inline btn-primary add-card-button pointer"
+                                    type="button" onclick="newElement('sub33','3')" style="visibility:hidden;">Add
+                                    Card</button>
+                                    <i id="icon3" class="fas fa-2x fa-times add-card-cancel pointer"
+                                    style="visibility:hidden;" onclick="hideTextArea('sub33','cardbutton3','icon3')"
+                                    ;></i>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <!--done-->
+            <div class="task-list-wrapper">
+                <div class="task-list">
+                    <div class="task-list-title-container">
+                        <h3 class="task-list-title">Done</h3>
+                        <span class="task-list-more pointer">...</span>
+                    </div>
+                    <div class="add-card-form">
+                        <form name="textform">
+                            <input id="addbutton" type=button name=type value='+ Add another card'
+                                onclick="showt('sub34','cardbutton4','icon4')">
+                        </form>
+                        <textarea id="sub34" rows="3" placeholder="Enter a title for this card..."
+                            class="full-width-input" style="visibility:hidden;"></textarea>
+
+                        <div class="add-card-form-actions">
+                            <button id="cardbutton4" class="btn btn-inline btn-primary add-card-button pointer"
+                                type="button" onclick="newElement('sub34','4')" style="visibility:hidden;">Add
+                                Card</button>
+                            <i id="icon4" class="fas fa-2x fa-times add-card-cancel pointer" style="visibility:hidden;"
+                                onclick="hideTextArea('sub34','cardbutton4','icon4')" ;></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="task-list-wrapper" id="newlist">
+                <div class="task-list">
+                    <div class="add-list-message pointer">
+                        <input id="addbutton" type=button name=type value='+ Add another list'
+                            onclick="showl('addlist')">
+                    </div>
+                </div>
+            </div>
+            <div style="visibility:hidden;" id="addlist" class="task-list-wrapper">
+                <div class="task-list">
+                    <div class="add-card-form">
+                        <form>
+                            <textarea rows="3" id="sub36" placeholder="Enter list title..."
+                                class="full-width-input"></textarea>
+                            <div class="add-list-form-actions">
+                                <button id="cardbutton6" class="btn btn-inline btn-primary      add-list-button pointer" type="button"
+                                    onclick="newlist1('sub36')">Add List</button>
+                                <i id="icon6" onclick="hidelist('addlist')"
+                                    class="fas fa-2x fa-times add-list-cancel pointer"></i>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
